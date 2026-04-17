@@ -15,8 +15,8 @@
   <DisplayName DefaultValue="Icon Scraper" />
   <Description DefaultValue="Recherche et insère des pictos et logos dans vos slides via Iconify." />
 
-  <IconUrl DefaultValue="https://localhost:3000/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/icon-128.png" />
+  <IconUrl DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/icon-128.png" />
 
   <SupportUrl DefaultValue="https://github.com/JeanSauvignon/pptx-icon-addin" />
 
@@ -29,7 +29,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+    <SourceLocation DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/taskpane.html" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -80,14 +80,14 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/icon-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/icon-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/icon-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/icon-80.png" />
       </bt:Images>
 
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/JeanSauvignon/pptx-icon-addin" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://jeansauvignon.github.io/pptx-icon-addin/taskpane.html" />
       </bt:Urls>
 
       <bt:ShortStrings>
