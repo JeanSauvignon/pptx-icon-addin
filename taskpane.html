@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icon Scraper</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🔍 Icon Scraper</h1>
+    </header>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Rechercher un picto, logo..."
+        autocomplete="off"
+      />
+      <button id="search-btn">Chercher</button>
+    </div>
+
+    <div class="filters">
+      <label>Collection :
+        <select id="filter-set">
+          <option value="">Toutes</option>
+          <option value="mdi">Material Design</option>
+          <option value="fa">Font Awesome</option>
+          <option value="logos">Logos de marques</option>
+          <option value="fluent">Fluent (Microsoft)</option>
+          <option value="ph">Phosphor</option>
+          <option value="tabler">Tabler</option>
+          <option value="heroicons">Heroicons</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="results" class="results-grid"></div>
+
+    <div id="preview-bar" class="preview-bar hidden">
+      <div id="preview-icon"></div>
+      <div class="preview-info">
+        <span id="preview-name"></span>
+        <span id="preview-set"></span>
+      </div>
+      <div class="preview-actions">
+        <label>Taille :
+          <select id="size-select">
+            <option value="64">64 px</option>
+            <option value="128" selected>128 px</option>
+            <option value="256">256 px</option>
+          </select>
+        </label>
+        <button id="insert-btn">Insérer dans la slide</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* =====================
+   Reset & base
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background: #f5f5f5;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+  gap: 10px;
+}
+
+/* =====================
+   Header
+   ===================== */
+header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b579a;
+  border-bottom: 2px solid #2b579a;
+  padding-bottom: 6px;
+}
+
+/* =====================
+   Barre de recherche
+   ===================== */
+.search-bar {
+  display: flex;
+  gap: 6px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #2b579a;
+}
+
+.search-bar button {
+  padding: 7px 14px;
+  background: #2b579a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.search-bar button:hover {
+  background: #1e3f73;
+}
+
+/* =====================
+   Filtres
+   ===================== */
+.filters label {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filters select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+/* =====================
+   Status
+   ===================== */
+.status {
+  font-size: 12px;
+  color: #888;
+  min-height: 16px;
+}
+
+.status.error {
+  color: #c0392b;
+}
+
+/* =====================
+   Grille de résultats
+   ===================== */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 8px;
+  overflow-y: auto;
+  flex: 1;
+  padding: 4px 2px;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px 4px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  gap: 4px;
+}
+
+.icon-card:hover {
+  border-color: #2b579a;
+  box-shadow: 0 2px 6px rgba(43, 87, 154, 0.2);
+}
+
+.icon-card.selected {
+  border-color: #2b579a;
+  background: #eef3fc;
+}
+
+.icon-card img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.icon-card .icon-label {
+  font-size: 9px;
+  color: #666;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* =====================
+   Barre de prévisualisation / insertion
+   ===================== */
+.preview-bar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.preview-bar.hidden {
+  display: none;
+}
+
+#preview-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.preview-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+#preview-name {
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#preview-set {
+  font-size: 11px;
+  color: #888;
+}
+
+.preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preview-actions label {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.preview-actions select {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#insert-btn {
+  padding: 8px 16px;
+  background: #107c41;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#insert-btn:hover {
+  background: #0a5c30;
+}
+
+#insert-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
